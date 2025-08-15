@@ -6,11 +6,15 @@
 import random
 import string
 
+def is_strong_password(password):
+    return len(password) >= 8 and any(c.isupper() for c in password) and any(c.isdigit() for c in password)
+
 def generate_password(length=12):
-    """Generate a secure random password."""
     characters = string.ascii_letters + string.digits + string.punctuation
     password = ''.join(random.choice(characters) for _ in range(length))
-    return password
+    if is_strong_password(password):
+        return password
+    return generate_password(length)
 
 # Example usage
 print("Generated password:", generate_password())
