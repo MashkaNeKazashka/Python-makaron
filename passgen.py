@@ -16,5 +16,13 @@ def generate_password(length=12):
         return password
     return generate_password(length)
 
+import argparse
+
+parser = argparse.ArgumentParser(description="Generate secure passwords.")
+parser.add_argument("--length", type=int, default=12, help="Length of the password")
+args = parser.parse_args()
+
+print("Generated password:", generate_password(args.length))
+
 # Example usage
 print("Generated password:", generate_password())
