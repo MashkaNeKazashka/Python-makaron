@@ -17,6 +17,15 @@ def generate_password(length=12):
     return generate_password(length)
 
 import argparse
+import csv
+
+def save_passwords_to_csv(passwords, filename="passwords.csv"):
+    with open(filename, 'w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(["Password"])
+        for password in passwords:
+            writer.writerow([password])
+    print(f"Passwords saved to {filename}")
 
 parser = argparse.ArgumentParser(description="Generate secure passwords.")
 parser.add_argument("--length", type=int, default=12, help="Length of the password")
