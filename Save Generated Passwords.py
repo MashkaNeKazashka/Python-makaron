@@ -1,4 +1,4 @@
-# Repository: python-password-generator
+
 
 import random
 import string
