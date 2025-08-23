@@ -1,5 +1,3 @@
-### **Repository 5: Password Generator**
-```python
 # Repository: python-password-generator
 # Description: Generate secure random passwords.
 
