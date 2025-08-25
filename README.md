@@ -1,4 +1,4 @@
-# Python Password Generator
+# Python Password Generator KZ
 
 Generate secure random passwords.
 
